@@ -119,16 +119,14 @@ var theOdyssey = "function expression or function declaration? Tis an obvious ch
 //Write a function called vowelCounter that takes in a string (theOdyssey) and returns how many vowels are in that string.
 
   //code here
-var counter = 0;
-var vowels = ['a', 'e', 'i', 'o', 'u', 'y'];
-var vowelCounter = function(str) {
-  for (var i = 0; i < str.length; i++){
-    for (var j = 0; j < vowels.length; j++) {
-      if(str[i] === vowels[j]) {
-        counter++;
+  var counter = 0;
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var vowelCounter = function(str) {
+    for (var i = 0; i < str.length; i++){
+      if (vowels  .indexOf(str[i]) !== -1) {
+          counter++;
       }
-    }
-  }return counter;
-};
+    }return counter;
+  };
 
 console.log(vowelCounter(theOdyssey));
